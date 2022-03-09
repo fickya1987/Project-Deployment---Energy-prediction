@@ -54,7 +54,7 @@ with header:
 with dataset:
     st.header('Energy Dataset')
     
-    energy_data = get_data('C:/Users/91890/golddeployment/energy_production.csv',    )
+    energy_data = get_data('energy_production.csv',    )
     st.write(energy_data.head(50))
     st.write(energy_data.shape)
     
