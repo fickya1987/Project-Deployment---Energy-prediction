@@ -110,7 +110,7 @@ with Model:
     n_estimators = sel_col3.selectbox('Select the Number of Trees', options= [100,150,200,250,300,350,400,450,500], index = 0)
     #criterion =  sel_col3.selectbox('Select the Metrics', options = ['mae','mse'], index= 0 )
     
-    rf_final_model = RandomForestRegressor(n_estimators=n_estimators,criterion= 'mae',max_depth=max_depth,random_state=21)
+    rf_final_model = RandomForestRegressor(n_estimators=n_estimators,criterion= 'absolute_error',max_depth=max_depth,random_state=21)
     rf_final_model.fit(X,Y)
     
     y_pred_rf_final = rf_final_model.predict(X)
